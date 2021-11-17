@@ -11,12 +11,12 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ##### Bloco 1: Introdução - Unix & Shell
 
-- [:heavy_check_mark:] 1-3: _Unix & Shell- Part 1_
-- [:heavy_check_mark:] 1-4: _Unix & Shell- Part 2_
+- :heavy_check_mark: 1-3: _Unix & Shell- Part 1_
+- :heavy_check_mark: 1-4: _Unix & Shell- Part 2_
 
 ##### Bloco 2: Git & GitHub
 
-- [:heavy_check_mark:] 2-1: _O que é e para que serve?_
+- :heavy_check_mark: 2-1: _O que é e para que serve?_
 - [ ] 2-2: _Entendendo os comandos_
 - [ ] 2-3: _Internet - Entendendo como ela funciona_
 
@@ -252,6 +252,6 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 35-2: _Testes e Exceções_
 - [ ] 35-3: _Entrada e Saída de dados_
 - [ ] 36-4: _Entrada e Saída de dados_
-- [ ] 35-5: _[Projeto - Tech news]()_
+- [ ] 36-5: _[Projeto - Tech news]()_
 
 # [...]
