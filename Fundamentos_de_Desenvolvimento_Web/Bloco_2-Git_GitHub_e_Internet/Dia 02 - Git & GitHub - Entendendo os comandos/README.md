@@ -1,9 +1,9 @@
-# Git e GitHub
+# Exercício sobre Git e GitHub
 
 Neste exercício, continuamos nossos estudos sobre o Git e o GitHub, porém utilizando novas ações em ambos através de novos comandos aprendidos.
 
 O exercício realizado tinha como requisitos os item abaixo:
- - Crie uma cópia do arquivo utilizado no exercício anterior;
+ - Crie uma cópia do arquivo utilizado no exercício anterior (trybe-skills.txt);
  - Verifique se não existe nada sem "commitar" utilizando git status. Caso exista algo, verifique se é necessário e faça o commit , ou remova-o;
  - Crie uma nova branch com o nome trybe-skills-changes e faça checkout nela;
  - No arquivo .txt , ao final da lista de habilidades , adicione mais duas habilidades que serão desenvolvidas na Trybe;
