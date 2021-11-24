@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(/Imagens/fundo-do-mar.jpg);
+}
+header{
+    background-color: rgb(200, 200, 200, 0.5);
+}
+
+#title{
+    text-align: center;
+    font-size: 60px;
+    padding: 30px;
+}
+
+#list-header{
+    text-align: center;
+    padding: 5px 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+header li{
+    list-style: none;
+    color: #fff;
+    font-size: 17px;
+    border-bottom: 2px solid #aaa;
+    border-right: 2px solid #aaa;;
+    display: inline-block;
+    margin: 0 50px;
+    padding: 2px;
+}
+
+#conteudo{
+    border-radius: 5px;
+    width: 60%;
+    margin: 50px auto;
+    padding: 5px;
+    background-color: rgb(255, 255, 255, 0.7);
+
+}
+
+#conteudo-title{
+    text-align: center;
+    font-size: 50px;
+    margin: 30px 0 40px 0;
+}
+
