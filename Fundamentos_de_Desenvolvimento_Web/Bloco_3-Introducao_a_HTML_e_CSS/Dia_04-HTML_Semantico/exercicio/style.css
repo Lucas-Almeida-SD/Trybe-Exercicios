@@ -6,7 +6,8 @@ body{
     background-image: url(/Imagens/fundo-do-mar.jpg);
 }
 header{
-    background-color: rgb(200, 200, 200, 0.5);
+    background-color: rgb(200, 200, 200, 0.8);
+    padding-bottom: 15px;
 }
 
 #title{
@@ -16,27 +17,27 @@ header{
 }
 
 #list-header{
-    text-align: center;
     padding: 5px 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0);
+    margin: 0 5%;
+    text-align: center;
 }
 
 header li{
     list-style: none;
     color: #fff;
     font-size: 17px;
-    border-bottom: 2px solid #aaa;
-    border-right: 2px solid #aaa;;
+    border-right: 2px solid #aaa;
+    border-left: 2px solid #aaa;
     display: inline-block;
-    margin: 0 50px;
-    padding: 2px;
+    padding: 2px 50px;
 }
 
 #conteudo{
     border-radius: 5px;
     width: 60%;
-    margin: 50px auto;
-    padding: 5px;
+    margin: 100px auto;
+    padding: 15px;
     background-color: rgb(255, 255, 255, 0.7);
 
 }
@@ -47,3 +48,20 @@ header li{
     margin: 30px 0 40px 0;
 }
 
+.subtitle{
+    font-size: 30px;
+    margin: 30px 0 10px 0;
+}
+
+#info-section-list{
+    margin-left: 40px;
+    
+}
+
+.paragrafo-section{
+    text-align: justify;
+    margin: 0 15px;
+    font-size: 18px;
+    line-height: 25px;
+    font-size: 18px;
+}
