@@ -6,13 +6,15 @@ body{
     background-image: url(/Imagens/fundo-do-mar.jpg);
 }
 header{
-    background-color: rgb(200, 200, 200, 0.8);
+    background-color: rgb(255, 255, 255, 0.7);
     padding-bottom: 15px;
 }
 
 #title{
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: 300;
     text-align: center;
-    font-size: 60px;
+    font-size: 50px;
     padding: 30px;
 }
 
@@ -24,6 +26,7 @@ header{
 }
 
 header li{
+    font-family: 'Josefin Sans', sans-serif;
     list-style: none;
     color: #fff;
     font-size: 17px;
@@ -33,36 +36,42 @@ header li{
     padding: 2px 50px;
 }
 
+#conteudo-e-aside{
+    height: 3000px;
+}
+
 #conteudo{
     border-radius: 5px;
     width: 60%;
     padding: 0 15px 70px 15px;
     margin: 80px 0 0 15%;
-    background-color: rgb(255, 255, 255, 0.7);
+    background-color: rgb(255, 255, 255, 0.8);
     float: left;
 }
 
-#conteudo-e-aside{
-    height: 3000px;
-}
-
 #conteudo-title{
+    font-family: 'Acme', sans-serif;
     text-align: center;
     font-size: 50px;
     margin: 30px 0 40px 0;
 }
 
 .subtitle{
+    font-family: 'Acme', sans-serif;
     font-size: 30px;
     margin: 30px 0 10px 0;
 }
 
-#section-list{
-    margin-left: 40px;
-    
+.section-list{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+    margin-left: 40px;  
+    line-height: 30px;
 }
 
 .paragrafo-section{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
     text-align: justify;
     margin: 0 15px;
     font-size: 18px;
@@ -93,14 +102,29 @@ ul.paragrafo-section li{
 }
 
 #aside{
+    font-family: 'Acme', sans-serif;
     border-radius: 5px;
-    background-color: rgb(255, 255, 255, 0.7);
+    background-color: rgb(255, 255, 255, 0.8);
     margin: 80px 2% 0 0;
     padding: 20px;
     float: right;
 }
 
 aside li{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
     margin-left: 25px;
     line-height: 30px;
+}
+
+#footer{
+    height: 50px;
+    background-color: rgb(0, 0, 0, 0.9);
+    text-align: center;
+    padding: 30px 0;
+}
+
+div#footer h1{
+    font-family: 'Acme', sans-serif;
+    color: #fff;
 }
