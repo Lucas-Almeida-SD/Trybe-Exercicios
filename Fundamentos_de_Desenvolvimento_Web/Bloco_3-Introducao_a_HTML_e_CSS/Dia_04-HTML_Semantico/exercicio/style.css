@@ -36,15 +36,14 @@ header li{
 #conteudo{
     border-radius: 5px;
     width: 60%;
-    padding: 15px;
+    padding: 0 15px 70px 15px;
     margin: 80px 0 0 15%;
     background-color: rgb(255, 255, 255, 0.7);
     float: left;
 }
 
 #conteudo-e-aside{
-    border: 2px solid green;
-    height: 2100px;
+    height: 3000px;
 }
 
 #conteudo-title{
@@ -69,6 +68,28 @@ header li{
     font-size: 18px;
     line-height: 25px;
     font-size: 18px;
+}
+
+ul.paragrafo-section li{
+    line-height: 40px;
+}
+ 
+#estomatopoda-descricao{
+    width: 400px;
+    float: right;
+    margin-left: 20px;
+}
+
+#stomatopoda-visao{
+    width: 400px;
+    float: left;
+    margin-right: 20px;
+}
+
+#stomatopoda-pesadelo{
+    width: 400px;
+    float: right;
+    margin-left: 20px;
 }
 
 #aside{
