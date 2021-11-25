@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(/Imagens/fundo-do-mar.jpg);
+}
+header{
+    background-color: rgb(255, 255, 255, 0.7);
+    padding-bottom: 15px;
+}
+
+#title{
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: 300;
+    text-align: center;
+    font-size: 50px;
+    padding: 30px;
+}
+
+#list-header{
+    padding: 5px 0;
+    background-color: rgba(0, 0, 0);
+    margin: 0 5%;
+    text-align: center;
+}
+
+header li{
+    font-family: 'Josefin Sans', sans-serif;
+    list-style: none;
+    color: #fff;
+    font-size: 17px;
+    border-right: 2px solid #aaa;
+    border-left: 2px solid #aaa;
+    display: inline-block;
+    padding: 2px 50px;
+}
+
+#conteudo-e-aside{
+    height: 3000px;
+}
+
+#conteudo{
+    border-radius: 5px;
+    width: 60%;
+    padding: 0 15px 70px 15px;
+    margin: 80px 0 0 15%;
+    background-color: rgb(255, 255, 255, 0.8);
+    float: left;
+}
+
+#conteudo-title{
+    font-family: 'Acme', sans-serif;
+    text-align: center;
+    font-size: 50px;
+    margin: 30px 0 40px 0;
+}
+
+.subtitle{
+    font-family: 'Acme', sans-serif;
+    font-size: 30px;
+    margin: 30px 0 10px 0;
+}
+
+.section-list{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+    margin-left: 40px;  
+    line-height: 30px;
+}
+
+.paragrafo-section{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+    text-align: justify;
+    margin: 0 15px;
+    font-size: 18px;
+    line-height: 25px;
+    font-size: 18px;
+}
+
+ul.paragrafo-section li{
+    line-height: 40px;
+}
+ 
+#estomatopoda-descricao{
+    width: 400px;
+    float: right;
+    margin-left: 20px;
+}
+
+#stomatopoda-visao{
+    width: 400px;
+    float: left;
+    margin-right: 20px;
+}
+
+#stomatopoda-pesadelo{
+    width: 400px;
+    float: right;
+    margin-left: 20px;
+}
+
+#aside{
+    font-family: 'Acme', sans-serif;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255, 0.8);
+    margin: 80px 2% 0 0;
+    padding: 20px;
+    float: right;
+}
+
+aside li{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+    margin-left: 25px;
+    line-height: 30px;
+}
+
+#footer{
+    height: 50px;
+    background-color: rgb(0, 0, 0, 0.9);
+    text-align: center;
+    padding: 30px 0;
+}
+
+div#footer h1{
+    font-family: 'Acme', sans-serif;
+    color: #fff;
+}
