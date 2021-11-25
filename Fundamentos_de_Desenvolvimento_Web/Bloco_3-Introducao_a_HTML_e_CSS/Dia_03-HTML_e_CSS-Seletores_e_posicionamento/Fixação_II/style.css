@@ -1,0 +1,15 @@
+h1, p{
+    text-align: center;
+}
+
+ol:hover{
+    background-color: #aaa;
+}
+
+li:active{
+    font-family: 'Indie Flower', cursive;
+}
+
+ol, ul{
+    list-style: none;
+}
