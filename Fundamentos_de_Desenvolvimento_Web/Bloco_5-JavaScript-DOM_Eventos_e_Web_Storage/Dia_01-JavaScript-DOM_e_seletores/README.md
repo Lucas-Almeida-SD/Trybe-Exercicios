@@ -1,4 +1,4 @@
-# Exercícios - Dia 5 - JavaScript - DOM e seletores #
+# Exercícios - Dia 1 - JavaScript - DOM e seletores #
 
 Nestes exercícios foram colocados em prática os conhecimentos obtidos no dia, nos quais foram sobre como o HTML se comunica com o JavaScript, utlizando o DOM para essa finalidade, fazendo-se uso do objeto __document__ e aplicando métodos como `getElementByID`, `getElementByClassName`, `getElementByTagName`, `querySelector` e `querySelectorAll` através do javascript. 
 O enunciado das questões estão todos postos abaixo.
