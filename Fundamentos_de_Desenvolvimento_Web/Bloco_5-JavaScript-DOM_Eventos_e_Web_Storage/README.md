@@ -1,1 +1,1 @@
-### BLOCO 4 - JavaScript: DOM, Eventos e Web Storage ###
+### BLOCO 5 - JavaScript: DOM, Eventos e Web Storage ###
