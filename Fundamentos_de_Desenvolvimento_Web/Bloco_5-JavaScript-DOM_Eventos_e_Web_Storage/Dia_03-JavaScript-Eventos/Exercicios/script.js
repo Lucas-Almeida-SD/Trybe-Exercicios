@@ -43,11 +43,11 @@ function createDaysOfTheWeek() {
   //QUESTÃO 2
 
   function holidays(string) {
-    let divContainer = document.querySelector('.buttons-container');
+    let divButton = document.querySelector('.buttons-container');
     let button = document.createElement('button');
     button.id = 'btn-holiday';
     button.innerText = string;
-    divContainer.appendChild(button);
+    divButton.appendChild(button);
   }
 
   holidays('Feriados');
@@ -78,4 +78,13 @@ function createDaysOfTheWeek() {
   holidaysButtonOnOff();
   
 
-  
+  //QUESTÃO 4
+  function fridayButtonOnOf() {
+    let divButton = document.querySelector('.buttons-container');
+    let fridayButton = document.createElement('button');
+    fridayButton.id = 'btn-friday';
+    fridayButton.innerText = 'Sexta-feira';
+    divButton.appendChild(fridayButton);
+  }
+
+  fridayButtonOnOf();
