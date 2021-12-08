@@ -79,7 +79,7 @@ function createDaysOfTheWeek() {
   
 
   //QUESTÃO 4
-  function fridayButtonOnOf() {
+  function fridayButton() {
     let divButton = document.querySelector('.buttons-container');
     let fridayButton = document.createElement('button');
     fridayButton.id = 'btn-friday';
@@ -87,4 +87,43 @@ function createDaysOfTheWeek() {
     divButton.appendChild(fridayButton);
   }
 
-  fridayButtonOnOf();
+  fridayButton();
+
+
+  //QUESTÃO 5
+  function fridayButtonOnOff() {
+    const fridaysNumbers = [4, 11, 18, 25];
+    let fridays = document.getElementsByClassName('friday');
+    let fridayButton = document.querySelector('#btn-friday');
+    fridayButton.addEventListener('click', fridayButtonEvent);
+
+    function fridayButtonEvent() {
+      for (let index = 0; index < fridays.length; index += 1)
+        if (fridays[index].innerText === 'Sextooou') {
+          fridays[index].innerText = fridaysNumbers[index]
+      } else {
+        fridays[index].innerText = 'Sextooou';
+      }
+    }
+  }
+  fridayButtonOnOff();
+
+
+  //QUESTÃO 6
+  function zoom() {
+    let monthListItens = document.getElementsByClassName('day');
+    for (let index = 0; index < monthListItens.length; index += 1) {
+      monthListItens[index].addEventListener('mouseover', aumentar);
+      monthListItens[index].addEventListener('mouseleave', reduzir);
+    }
+    
+    function aumentar(element) {
+      element.target.style.fontSize = '35px';
+    }
+
+    function reduzir(element) {
+      element.target.style.fontSize = '';
+    }
+  }
+
+  zoom();
