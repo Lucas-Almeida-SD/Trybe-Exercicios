@@ -22,9 +22,9 @@ function createDaysOfTheWeek() {
     const holidays = [24, 25, 31];
     const fridays = [4, 11, 18, 25];
     let ulDays = document.querySelector('.week-days');
+    ulDays.id = 'days';
     for (let monthDay of dezDaysList) {
         let day = document.createElement('li');
-        day.id = 'days';
         day.classList.add('day');
         if (holidays.indexOf(monthDay) !== -1) {
             day.classList.add('holiday');
@@ -125,5 +125,66 @@ function createDaysOfTheWeek() {
       element.target.style.fontSize = '';
     }
   }
-
   zoom();
+
+  //QUESTÃO 7
+  function adicionarTarefa() {
+    const myTasks = document.querySelector('.my-tasks');
+    const newTask = document.createElement('span');
+    newTask.innerText = 'Projeto';
+    myTasks.appendChild(newTask);
+  }
+  adicionarTarefa();
+
+  //QUESTÃO 8
+  const myTasks = document.querySelector('.my-tasks');
+  function adicionarLegendaATarefa(cor) {
+    const legenda = document.createElement('div');
+    legenda.className = 'task';
+    legenda.style.backgroundColor = cor;
+    myTasks.appendChild(legenda);
+  }
+  adicionarLegendaATarefa('green');
+
+  //QUESTÃO 9
+  const task = myTasks.children[2];
+  function selectTask() {
+    function checkTask(event) {
+      const element = event.target;
+      if ( element.className === 'task') {
+        element.className = 'task selected';
+      } else {
+        element.className = 'task';
+      }
+    }
+    task.addEventListener('click', checkTask);
+  }
+  selectTask();
+
+  //QUESTÃO 10
+  function changeColorOfTheDay(daySelected, color) {
+    const colorOfTheDaySelected = daySelected.style.color;
+    if (colorOfTheDaySelected !== color) {
+      daySelected.style.color = color;
+    } else {
+      daySelected.style.color = 'rgb(119,119,119)';
+    }
+  }
+  
+  function putColorOnMonth() {
+    const days = document.getElementsByClassName('day');
+    function checkTaskSelected(event) {
+      const daySelected = event.target;
+      const taskSelected = document.querySelector('.selected');
+      if (taskSelected !== null) {
+        const color = taskSelected.style.backgroundColor;
+        changeColorOfTheDay(daySelected, color);
+      } else {
+        window.alert('Selecione uma tarefa!');
+      }
+    }
+    for (let index = 0; index < days.length; index += 1) {
+      days[index].addEventListener('click', checkTaskSelected);
+    }
+  }
+  putColorOnMonth();
