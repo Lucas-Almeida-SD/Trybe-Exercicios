@@ -188,3 +188,43 @@ function createDaysOfTheWeek() {
     }
   }
   putColorOnMonth();
+
+  // BÔNUS
+  const compromissos = document.querySelector('.task-list')
+  const taskInput = document.querySelector('#task-input')
+  function amountOfEmptySpaces() {
+    let result = true;
+    const text = taskInput.value.split(' ');
+    for (let index = 0; index < text.length; index += 1) {
+      if (text[index] !== '') {
+        result = false;
+        break
+      }
+    }
+    return result;
+  }
+  function checkCompromisso() {
+    if (amountOfEmptySpaces() === false) {
+      const newTask = document.createElement('li');
+      newTask.innerText = taskInput.value;
+      compromissos.appendChild(newTask);
+    } else {
+      window.alert('Compromisso Inválido!')
+    }
+  }
+
+  function addCompromissosByEnter() {
+    function checkKey(event) {
+      if (event.key === 'Enter') {
+        checkCompromisso();
+      }
+    }
+    taskInput.addEventListener('keydown', checkKey);
+  }
+
+  function addCompromissosByButton() {
+    const btnAdd = document.querySelector('#btn-add');
+    btnAdd.addEventListener('click', checkCompromisso);
+  }
+  addCompromissosByEnter();
+  addCompromissosByButton();
