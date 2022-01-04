@@ -33,6 +33,7 @@ section {
 
 .paragraph {
     font-size: 15px;
+    font-family: sans-serif;
     margin: 20px 0;
     line-height: 25px;
 }
@@ -92,4 +93,42 @@ section {
 
 .textFontSize:hover {
     background-color: rgb(170, 170, 170);;
+}
+
+#ulLineHeight {
+    text-align: center;
+    padding-left: 0;
+    list-style: none;
+}
+
+.lineHeight {
+    font-size: 15px;
+    background-color: rgb(204, 204, 204);
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+.lineHeight:hover {
+    background-color: rgb(170, 170, 170);
+}
+
+#ulFontFamily {
+    text-align: center;
+    padding-left: 0;
+    list-style: none;
+}
+
+.fontFamily {
+    font-size: 15px;
+    background-color: rgb(204, 204, 204);
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+.fontFamily:hover {
+    background-color: rgb(170, 170, 170);
 }

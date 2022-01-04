@@ -129,3 +129,103 @@ function changeFontSize() {
 }
 
 changeFontSize();
+
+const buttonLineHeight = document.querySelector('#buttonLineHeight');
+const divLineHeight  = document.querySelector('#divLineHeight');
+
+function setLineHeightOnParagraphs(lineHeight) {
+    const paragraphs = document.getElementsByClassName('paragraph');
+    for (let index = 0; index < paragraphs.length; index += 1) {
+        paragraphs[index].style.lineHeight = lineHeight;
+    }
+}
+
+function addEventAtUlLineHeight(ulLineHeight) {
+    function selectLineHeight(event) {
+        const lineHeightList = ['23px', '25px', '27px', '29px', '31px'];
+        const elementLineHeightSelected = event.target.innerText.split(' ')[3];
+        const lineHeight = lineHeightList[elementLineHeightSelected - 1];
+        setLineHeightOnParagraphs(lineHeight);
+        event.target.parentElement.remove();
+    }
+    for (let index = 0; index < ulLineHeight.length; index += 1) {
+        ulLineHeight[index].addEventListener('click', selectLineHeight);
+    }
+}
+
+function showLineHeight() {
+    const ulLineHeight = document.createElement('ul');
+    ulLineHeight.id = 'ulLineHeight';
+    for (let index = 0; index < 5; index += 1) {
+        const liLineHeight = document.createElement('li');
+        liLineHeight.className = 'lineHeight';
+        liLineHeight.innerText = 'Espaçamento entre linhas ' + (index + 1);
+        ulLineHeight.appendChild(liLineHeight); 
+    }
+    divLineHeight.appendChild(ulLineHeight)
+    addEventAtUlLineHeight(document.getElementsByClassName('lineHeight'));
+}
+
+function changeLineHeight () {
+    function checkLineHeight() {
+        const ulLineHeight = document.querySelector('#ulLineHeight');
+        if (ulLineHeight === null) {
+            showLineHeight();
+        } else {
+            ulLineHeight.remove();
+        }
+    }
+    buttonLineHeight.addEventListener('click', checkLineHeight);
+}
+
+changeLineHeight();
+
+const buttonFontFamily = document.querySelector('#buttonFontFamily');
+const divFontFamily  = document.querySelector('#divFontFamily');
+
+function setFontFamilyOnParagraphs(fontFamily) {
+    const paragraphs = document.getElementsByClassName('paragraph');
+    for (let index = 0; index < paragraphs.length; index += 1) {
+        paragraphs[index].style.fontFamily = fontFamily;
+    }
+}
+
+function addEventAtUlFontFamily(ulFontFamily) {
+    function selectFontFamily(event) {
+        const fontFamily = event.target.innerText;
+        setFontFamilyOnParagraphs(fontFamily);
+        event.target.parentElement.remove();
+    }
+    for (let index = 0; index < ulFontFamily.length; index += 1) {
+        ulFontFamily[index].addEventListener('click', selectFontFamily);
+    }
+}
+
+function showFontFamily() {
+    const ulFontFamily = document.createElement('ul');
+    ulFontFamily.id = 'ulFontFamily';
+    const fontFamilyList = ['Acme', 'Fuzzy Bubbles', 'Indie Flower', 'Nosifer', 'sans-serif'];
+    for (let index = 0; index < 5; index += 1) {
+        const liFontFamily = document.createElement('li');
+        liFontFamily.className = 'fontFamily';
+        liFontFamily.innerText = fontFamilyList[index];
+        liFontFamily.style.fontFamily = fontFamilyList[index]
+        ulFontFamily.appendChild(liFontFamily); 
+    }
+    divFontFamily.appendChild(ulFontFamily)
+    addEventAtUlFontFamily(document.getElementsByClassName('fontFamily'));
+}
+
+function changeFontFamily () {
+    function checkFontFamily() {
+        const ulFontFamily = document.querySelector('#ulFontFamily');
+        if (ulFontFamily === null) {
+            showFontFamily();
+        } else {
+            ulFontFamily.remove();
+        }
+    }
+    buttonFontFamily.addEventListener('click', checkFontFamily);
+}
+
+changeFontFamily();
