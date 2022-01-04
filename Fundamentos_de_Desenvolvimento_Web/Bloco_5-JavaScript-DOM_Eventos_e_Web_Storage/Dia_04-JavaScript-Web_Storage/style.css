@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.backgroundText {
+    background-color: rgb(255, 255, 255);
+}
+
+.sectionDiv {
+    display: inline-block;
+    width: 50%;
+    margin-left: 15%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px black;
+}
+
+section {
+    text-align: justify;
+}
+
+#title {
+    font-size: 50px;
+    text-align: center;
+    margin: 20px 0 30px;
+}
+
+.paragraph {
+    font-size: 15px;
+    margin: 20px 0;
+    line-height: 25px;
+}
+
+.property {
+    float: right;
+}
+
+.property {
+    margin: 30px 50px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 30px black;
+}
+
+.asideProperty {
+    margin: 20px 0 10px 0;
+}
+
+.button {
+    width: 100%;
+    display: block;
+    text-align: center;
+    border: 1px solid black;
+    background-color: rgb(204, 204, 204);
+}
+
+.listColor {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.color {
+    list-style: none;
+    padding: 0px;
+    border: 1px solid black;
+    width: 100%;
+    text-align: center;
+}
+
+#textSizeList {
+    text-align: center;
+    padding-left: 0;
+    list-style: none;
+}
+
+.textFontSize {
+    font-size: 15px;
+    background-color: rgb(204, 204, 204);
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+.textFontSize:hover {
+    background-color: rgb(170, 170, 170);;
+}
