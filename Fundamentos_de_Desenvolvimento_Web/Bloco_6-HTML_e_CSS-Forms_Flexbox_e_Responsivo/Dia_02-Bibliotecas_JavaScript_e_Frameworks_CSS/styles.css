@@ -1,0 +1,29 @@
+main {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.container {
+  margin-bottom: 15px;
+}
+
+form {
+  background-color: rgb(240, 240, 240);
+  border-radius: 5px;
+  border: 1px solid black;
+  box-shadow: 0 0 5px black;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 25px;
+}
+
+.div-btn {
+  text-align: center;
+}
+
+.btn {
+  margin: 5px;
+}
