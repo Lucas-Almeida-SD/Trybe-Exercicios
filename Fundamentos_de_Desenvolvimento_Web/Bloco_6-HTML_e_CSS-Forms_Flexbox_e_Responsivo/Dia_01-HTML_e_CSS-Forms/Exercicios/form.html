@@ -17,72 +17,70 @@
     <form id="formulario" action="" method="get">
       <fieldset><legend>Dados Pessoais</legend>
         <div>
-          <label for="full-name">Nome Completo: 
-            <input type="text" id="full-name" name="full-name" placeholder="Insira seu nome completo" maxlength="40" autofocus required>
+          <label for="full-name" class="data">Nome Completo: 
+            <input type="text" id="full-name" class="dataValue textValue" name="full-name" placeholder="Insira seu nome completo" maxlength="40" autofocus required>
           </label>
         </div>
         
         <div>
-          <label for="email">Email: 
-            <input type="text" id="email" name="email" placeholder="Insira seu email" maxlength="50" required>
+          <label for="email" class="data">Email: 
+            <input type="text" id="email" class="dataValue textValue" name="email" placeholder="Insira seu email" maxlength="50" required>
           </label>
         </div>
 
         <div>
-          <label for="cpf">CPF: 
-            <input type="text" id="cpf" name="cpf" placeholder="Insira seu CPF" maxlength="11" required>
+          <label for="cpf" class="data">CPF: 
+            <input type="text" id="cpf" class="dataValue textValue" name="cpf" placeholder="Insira seu CPF" maxlength="11" required>
           </label>
         </div>
         
         <div>
-          <label for="address">Endereço: 
-            <input type="text" id="address" name="address" placeholder="Insira seu endereço" maxlength="200" required>
+          <label for="address" class="data">Endereço: 
+            <input type="text" id="address" class="dataValue textValue" name="address" placeholder="Insira seu endereço" maxlength="200" required>
           </label>
         </div>
 
         <div>
-          <label for="">Cidade: 
-            <input type="text" id="town" name="town" placeholder="Insira sua cidade" maxlength="28" required>
+          <label for="" class="data">Cidade: 
+            <input type="text" id="town" class="dataValue textValue" name="town" placeholder="Insira sua cidade" maxlength="28" required>
           </label>
         </div>
 
         <div>
-          <label for="state">Estado: 
+          <label for="state" class="data">Estado: </label>
             <select id="state" name="state"></select>
-          </label>
         </div>
 
         <div>
-          <label for="">Tipo de moradia:</label><br>
-          <input type="radio" id="tipo-1" name="tipo" required>
+          <label for="" class="data">Tipo de moradia: </label><br>
+          <input type="radio" id="tipo-1" class="dataValue radioValue" name="tipo" value="Casa" checked required>
           <label for="tipo-1">Casa</label>
-          <input type="radio" id="tipo-2" name="tipo" required>
+          <input type="radio" id="tipo-2" class="dataValue radioValue" name="tipo" value="Apartamento" required>
           <label for="tipo-2">Apartamento</label> 
         </div>
-
       </fieldset>
 
       <fieldset id="last-office"><legend>Dados do último emprego</legend>
         <div>
-          <label for="resume">Resumo do Currículo: </label><br>
-          <textarea name="resume" id="resume" cols="50" rows="5" placeholder="Digite seu resumo aqui!" maxlength="1000" required></textarea>
+          <label for="resume" class="data">Resumo do Currículo: </label><br>
+          <textarea name="resume" id="cv-resume" class="dataValue textValue" cols="50" rows="5" placeholder="Digite seu resumo aqui!" maxlength="1000" required></textarea>
         </div>
 
         <div>
-          <label for="">Cargo: 
-            <input type="text" id="office" name="office" placeholder="Insira seu cargo" maxlength="40" required>
+          <label for="" class="data">Cargo: 
+            <input type="text" id="office" class="dataValue textValue" name="office" placeholder="Insira seu cargo" maxlength="40" required>
           </label>
         </div>
 
         <div>
-          <label for="officeDescription">Descrição do Cargo: 
-            <input type="text" id="officeDescription" name="officeDescription" placeholder="Insira um breve descrição" maxlength="500" required>
+          <label for="officeDescription" class="data">Descrição do Cargo: 
+            <input type="text" id="officeDescription" class="dataValue textValue" name="officeDescription" placeholder="Insira um breve descrição" maxlength="500" required>
           </label>
         </div>
 
         <div>
-          <label for="date">Data de início: 
-            <input type="text" id="date" name="date" placeholder="dd/mm/aaaa" maxlength="10" required>
+          <label for="date" class="data">Data de início: 
+            <input type="text" id="date" class="dataValue textValue" name="date" placeholder="dd/mm/aaaa" maxlength="10" required>
           </label>
         </div>
       </fieldset>
