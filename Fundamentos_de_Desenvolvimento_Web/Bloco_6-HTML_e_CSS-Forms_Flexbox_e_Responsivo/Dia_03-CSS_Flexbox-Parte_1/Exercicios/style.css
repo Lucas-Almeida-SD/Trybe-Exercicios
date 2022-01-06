@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu';
+}
+
+.header-img {
+  width: 70px;
+}
+
+.gallery-img {
+  width: 150px;
+}
+
+.social-img {
+  width: 25px;
+  margin-left: 10px;
+}
+
+.header-container {
+  background-color: rgb(50, 50, 50);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#title-header{
+  color: white;
+  font-size: 20px;
+}
+
+#sign-up {
+  color: rgb(200, 200, 200);
+  font-size: 15px;
+  text-decoration: underline;
+}
+
+#first-section {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  font-size: 23px;
+}
+
+#second-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#tech{
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+}
+
+.tech-container {
+  width: 175px;
+  height: 220px;
+  margin: 7px 5px;
+  border-radius: 20px;
+  background-color: rgb(230, 230, 230);
+  box-shadow: 2px 2px 2px rgb(150, 150, 150);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.tech-text {
+  margin-bottom: 10px;
+}
+
+#third-section {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+hr {
+  width: 160px;
+}
+
+#links {
+  display: flex;
+  justify-content: center;
+}
