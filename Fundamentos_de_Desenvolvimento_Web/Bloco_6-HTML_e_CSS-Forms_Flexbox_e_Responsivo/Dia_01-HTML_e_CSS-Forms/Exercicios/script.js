@@ -121,6 +121,7 @@ const brasilianStates = [
 
   function generateMessage(message) {
     const paragraph = document.createElement('p');
+    paragraph.className = 'paragraph';
     paragraph.innerHTML = message;
     divCurriculoGerado.appendChild(paragraph);
   }
@@ -221,7 +222,7 @@ const brasilianStates = [
   function checkFullName() {
     deleteMessenge();
     if (fullName.value === '' || fullName.value.length > 40) {
-      generateMessage('Insira uma nome válido de até 40 caracteres!');
+      generateMessage('Insira um nome válido de até 40 caracteres!');
       fullName.focus();
       validation = false;
     } else {
@@ -231,6 +232,15 @@ const brasilianStates = [
   }
   
   btnSubmit.addEventListener('click', checkFullName);
+
+  //Limpar formulário e CV gerado
+  const btnReset = document.querySelector('#btn-reset');
+  function clearCVgenerated() {
+    deleteMessenge();
+  }
+  btnReset.addEventListener('click', clearCVgenerated);
+
+
 
   //Gerar o currículo
   let datas;
@@ -255,7 +265,6 @@ const brasilianStates = [
     for (let index = 0; index < dataValues.length; index += 1) {
        checkDataValues(index);
     }
-    console.log(dataValuesValidation);
     for (let index = 0; index < datas.length; index += 1) {
       generateMessage(datas[index].innerText + dataValuesValidation[index]);
     }
@@ -265,7 +274,11 @@ const brasilianStates = [
     datas = document.querySelectorAll('.data');
     dataValues = document.querySelectorAll('.dataValue');
     dataValuesValidation = [];
+    const titleCVGenerated = document.createElement('h2');
+    titleCVGenerated.id = 'title-CV';
+    titleCVGenerated.innerText = 'Curriculum Vitae'
     if (validation === true) {
+      divCurriculoGerado.appendChild(titleCVGenerated);
       generateInfoCv();
     }
   }

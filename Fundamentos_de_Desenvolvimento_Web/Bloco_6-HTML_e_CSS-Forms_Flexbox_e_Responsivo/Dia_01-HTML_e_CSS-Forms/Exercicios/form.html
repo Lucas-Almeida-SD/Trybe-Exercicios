@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>Formulário</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Acme&family=Alfa+Slab+One&family=Creepster&family=Fuzzy+Bubbles&family=Indie+Flower&family=Josefin+Sans:wght@300&family=Luckiest+Guy&family=Nosifer&family=Permanent+Marker&family=Press+Start+2P&family=Road+Rage&family=Shojumaru&family=Special+Elite&family=Yatra+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -53,9 +54,9 @@
 
         <div>
           <label for="" class="data">Tipo de moradia: </label><br>
-          <input type="radio" id="tipo-1" class="dataValue radioValue" name="tipo" value="Casa" checked required>
+          <input type="radio" id="tipo-1" class="dataValue radioValue" name="tipo" value=" Casa" checked required>
           <label for="tipo-1">Casa</label>
-          <input type="radio" id="tipo-2" class="dataValue radioValue" name="tipo" value="Apartamento" required>
+          <input type="radio" id="tipo-2" class="dataValue radioValue" name="tipo" value=" Apartamento" required>
           <label for="tipo-2">Apartamento</label> 
         </div>
       </fieldset>
@@ -67,9 +68,9 @@
         </div>
 
         <div>
-          <label for="" class="data">Cargo: 
+          <label for="" class="data">Cargo: </label>
             <input type="text" id="office" class="dataValue textValue" name="office" placeholder="Insira seu cargo" maxlength="40" required>
-          </label>
+          
         </div>
 
         <div>
@@ -85,14 +86,18 @@
         </div>
       </fieldset>
 
-      <button type="submit" id="btn-submit">Enviar</button>
-      <button type="reset">Limpar Formulário</button>
+      <div id="div-buttons">
+        <button type="submit" id="btn-submit" class="button">Enviar</button>
+        <button type="reset" id="btn-reset" class="button">Limpar Formulário</button>
+      </div>      
     </form>
 
-    <div id="div-curriculo-gerado" >
-    </div>
-
+    
   </main>
+
+  <aside>
+    <div id="div-curriculo-gerado"></div>
+  </aside>
 
   <script src="script.js"></script>
 </body>
