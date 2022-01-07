@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  font-size: 25px;
+  text-align: center;
+  background-color: #7CDAD8;
+  padding: 20px;
+}
+
+h1 {
+  color: white;
+  font-family: Luckiest Guy, cursive;
+  font-weight: 100;
+}
+
+main , aside{
+  background-color: #BFF5DD;
+  border-radius: 10px;
+  box-shadow: 0 0 10px black;
+  width: 50%;
+  margin: 30px auto;
+  padding: 10px;
+}
+
+fieldset {
+  background-color: white;
+  margin: 15px 0;
+  padding: 10px;
+  opacity: 0.8;
+}
+
+legend {
+  font-size: 28px;
+  font-family: Yatra One, cursive;
+  margin-left: 15px;
+}
+
+input[type='text'], textarea, select {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+label , input, textarea, select  {
+  font-size: 18px;
+  font-family: Acme, sans-serif;
+}
+
+textarea {
+  resize: none;
+}
+
+#div-buttons {
+  text-align: center;
+}
+
+.button{
+  font-size: 18px;
+  font-family: Special Elite, cursive;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 15px 5px;
+}
+
+#btn-submit {
+  background-color: #5EE827;
+}
+
+#btn-reset {
+  background-color: #F40A3B;
+}
+
+#title-CV {
+  text-align: center;
+  font-size: 30px;
+  font-family: Yatra One, cursive;
+  margin: 20px 0;
+}
+
+.paragraph {
+  font-size: 20px;
+  margin: 15px 10px;
+  font-family: Acme, sans-serif;
+}
