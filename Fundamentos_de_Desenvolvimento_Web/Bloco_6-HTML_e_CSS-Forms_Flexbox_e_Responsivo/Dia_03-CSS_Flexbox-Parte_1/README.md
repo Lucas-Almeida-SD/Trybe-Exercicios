@@ -1,0 +1,2 @@
+# Exercicios - Dia 3 - CSS Flexbox - Parte 1
+Nestes exercícios foram colocados em prática os conhecimentos obtidos no dia, nos quais foram sobre `CSS Flexbox` , que é um módulo de layout que torna fácil o desenvolvimento de estruturas responsivas. Nesses exercícios, foram utilizadas propriedades como `flex-direction`, `flex-wrap, flex-flow`, `justify-content`, `align-content` e `align-items`.
