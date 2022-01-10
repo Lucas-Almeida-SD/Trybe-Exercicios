@@ -1,0 +1,124 @@
+/*
+ * @see http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * apply a natural box layout model to all elements, but allowing components to change
+ */
+ html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 20px 10px;
+  max-width:  1500px;
+}
+
+article {
+  text-align: justify;
+  width: 80%;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.4em;
+}
+
+img {
+    max-width: 100%;
+}
+
+main {
+  background-color: rgb(240, 240, 240);
+  border-radius: 10px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+figure {
+    margin: 20px 0;
+    width: 60%;
+    text-align: center;
+}
+
+figcaption {
+  font-size: .8em;
+  text-align: center;
+}
+
+p , figcaption {
+  font-size: 1.2em;
+}
+
+@media screen and (min-width: 800px) {
+  /* Requisito 1 */
+  p , figcaption {
+    font-size: 1.5em;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  figcaption {
+    margin-bottom: 30px;
+  }
+
+  body {
+    background-color: #BFF5DD;
+    margin: 20px 30px;
+  }
+
+  section {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  figure {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1300px){
+  body {
+  background-image: linear-gradient( to right, #572083, #FEDA02);
+  margin: 0 auto;
+  }
+
+  main {
+    margin: 0 20px;
+  }
+
+  h1 {
+    font-size: 4em;
+  }
+
+  h2 {
+    font-size: 2.5em;
+  }
+
+  p , figcaption {
+    font-size: 2em;
+  }
+
+  figure {
+    width: 30%;
+  }
+
+}
