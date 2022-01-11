@@ -5,93 +5,7 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-@media screen and (max-width: 600px){
-  body {
-    display: flex;
-    flex-direction: column;
-  }
-  header {
-    display: flex;
-    flex-direction: column;
-    background-image: linear-gradient(to top, #6E3BC6, white);
-  }
-  
-  header h1 {
-    font-size: 32px;
-    margin: 20px 0 5px;
-  }
-
-  .title {
-    text-align: center;
-    padding: 0 5%;
-  }
-
-  #nav-header ul{
-    width: 100%;
-    list-style: none;
-    margin: 10px 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  #nav-header ul li {
-    margin: 0 3% 0;
-    font-size: 18px;
-    text-decoration: underline;
-  }
-
-  #nav-header ul li:hover {
-    color: white;
-  }
-
-  .aside-one , .aside-two , article {
-    margin: 10px 5%;
-    padding: 5px 0;
-    background-image: linear-gradient(to right, #F7BEEF, #D669AA);
-    border-radius: 10px;
-    box-shadow: 0 0 5px black;
-  }
-
-  aside h2 {
-    text-align: center;
-  }
-
-  aside ul {
-    padding: 0 10%;
-  }
-
-  aside ul li{
-    text-align: justify;
-    font-size: 16px;
-  }
-
-  article {
-    background-image: linear-gradient(to right, #754178, #BF6986, #754178);
-  }
-
-  article h1 {
-    text-align: center;
-    padding: 5%;
-  }
-
-  article p {
-    font-size: 16px;
-    text-align: justify;
-    padding: 0 5%;
-  }
-
-  footer {
-    text-align: center;
-    color: white;
-    background-color: black;
-    opacity: 0.8;
-    padding: 10px 5%;
-  }
-}
-
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 700px){
   .container {
     display: flex;
     flex-direction: column;
@@ -104,6 +18,7 @@ html {
   
   header h1 {
     font-size: 32px;
+    font-family: Indie Flower, cursive;
     margin: 20px 0 5px;
   }
 
@@ -125,6 +40,7 @@ html {
   #nav-header ul li {
     margin: 0 3% 0;
     font-size: 18px;
+    font-family: Fuzzy Bubbles, cursive;
     text-decoration: underline;
   }
 
@@ -140,7 +56,8 @@ html {
     box-shadow: 0 0 5px black;
   }
 
-  aside h2 {
+  aside h2 , article h1 {
+    font-family: Road Rage, cursive;
     text-align: center;
   }
 
@@ -150,6 +67,7 @@ html {
 
   aside ul li{
     text-align: justify;
+    font-family: Acme, sans-serif;
     font-size: 16px;
   }
 
@@ -164,6 +82,7 @@ html {
 
   article p {
     font-size: 16px;
+    font-family: Acme, sans-serif;
     text-align: justify;
     padding: 0 5%;
   }
@@ -174,5 +93,122 @@ html {
     background-color: black;
     opacity: 0.8;
     padding: 10px 5%;
+  }
+
+  footer h3 {
+    font-family: Luckiest Guy, cursive;
+  }
+
+  footer p {
+    font-family: Special Elite, cursive;
+  }
+}
+
+@media screen and (min-width: 701px){
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to top, #6E3BC6, white);
+  }
+  
+  header h1 {
+    font-family: Indie Flower, cursive;
+    font-size: 48px;
+    margin: 20px 0 5px;
+  }
+
+  .title {
+    text-align: center;
+    padding: 0 5%;
+  }
+
+  #nav-header ul{
+    width: 100%;
+    list-style: none;
+    margin: 10px 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #nav-header ul li {
+    margin: 0 3% 0;
+    font-size: 24px;
+    font-family: Fuzzy Bubbles, cursive;
+    text-decoration: underline;
+  }
+
+  #nav-header ul li:hover {
+    color: white;
+  }
+
+  .asides {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .aside-one , .aside-two{
+    flex-basis: 45%;
+    margin: 10px 0;
+    padding: 5px 0;
+    background-image: linear-gradient(to right, #F7BEEF, #D669AA);
+    border-radius: 10px;
+    box-shadow: 0 0 5px black;
+  }
+
+  aside h2 , article h1 {
+    text-align: center;
+    font-size: 64px;
+    font-family: Road Rage, cursive;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  aside ul {
+    padding: 0 10%;
+  }
+
+  aside ul li{
+    text-align: justify;
+    font-size: 24px;
+    font-family: Acme, sans-serif;
+  }
+
+  article {
+    width: 94%;
+    margin: 0 auto 10px;
+    background-image: linear-gradient(to right, #754178, #BF6986, #754178);
+    border-radius: 10px;
+  }
+
+  article p {
+    font-size: 24px;
+    font-family: Acme, sans-serif;
+    text-align: justify;
+    padding: 0 5%;
+  }
+
+  footer {
+    text-align: center;
+    color: white;
+    background-color: black;
+    opacity: 0.8;
+    padding: 10px 5%;
+  }
+
+  footer h3 {
+    font-size: 28px;
+    font-family: Luckiest Guy, cursive;
+    font-weight: 200;
+  }
+
+  footer p {
+    font-size: 20px;
+    font-family: Special Elite, cursive;
   }
 }
