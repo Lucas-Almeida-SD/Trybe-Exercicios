@@ -206,9 +206,8 @@ html {
 }
 
 @media screen and (min-width: 1201px){
-  .container {
-    display: flex;
-    flex-direction: column;
+  body {
+    background-color: rgb(200, 59, 108, 0.2);
   }
 
   header {
@@ -247,6 +246,13 @@ html {
 
   #nav-header ul li:hover {
     color: white;
+  }
+
+  .container {
+    width: 1201px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
   }
 
   .asides {
@@ -310,12 +316,16 @@ html {
   }
 
   footer h3 {
+    width: 1201px;
+    margin: 0 auto;
     font-size: 28px;
     font-family: Luckiest Guy, cursive;
     font-weight: 200;
   }
 
   footer p {
+    width: 1201px;
+    margin: 0 auto;
     font-size: 20px;
     font-family: Special Elite, cursive;
   }
