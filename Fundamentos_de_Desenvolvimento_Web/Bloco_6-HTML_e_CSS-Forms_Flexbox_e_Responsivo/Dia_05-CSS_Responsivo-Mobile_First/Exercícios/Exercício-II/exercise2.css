@@ -11,8 +11,6 @@ html {
     flex-direction: column;
   }
   header {
-    display: flex;
-    flex-direction: column;
     background-image: linear-gradient(to top, #6E3BC6, white);
   }
   
@@ -27,21 +25,8 @@ html {
     padding: 0 5%;
   }
 
-  #nav-header ul{
-    width: 100%;
-    list-style: none;
-    margin: 10px 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  #nav-header ul li {
-    margin: 0 3% 0;
-    font-size: 18px;
-    font-family: Fuzzy Bubbles, cursive;
-    text-decoration: underline;
+  #nav-header {
+    display: none;
   }
 
   #nav-header ul li:hover {
