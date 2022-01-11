@@ -33,6 +33,9 @@ html {
     color: white;
   }
 
+  .book-cover {
+    display: none;
+  }
   .aside-one , .aside-two , article {
     margin: 10px 5%;
     padding: 5px 0;
@@ -89,7 +92,7 @@ html {
   }
 }
 
-@media screen and (min-width: 701px){
+@media screen and (min-width: 701px) and (max-width: 1200px){
   .container {
     display: flex;
     flex-direction: column;
@@ -132,6 +135,10 @@ html {
     color: white;
   }
 
+  .book-cover {
+    display: none;
+  }
+
   .asides {
     display: flex;
     justify-content: space-evenly;
@@ -144,6 +151,122 @@ html {
     background-image: linear-gradient(to right, #F7BEEF, #D669AA);
     border-radius: 10px;
     box-shadow: 0 0 5px black;
+  }
+
+  aside h2 , article h1 {
+    text-align: center;
+    font-size: 64px;
+    font-family: Road Rage, cursive;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  aside ul {
+    padding: 0 10%;
+  }
+
+  aside ul li{
+    text-align: justify;
+    font-size: 24px;
+    font-family: Acme, sans-serif;
+  }
+
+  article {
+    width: 94%;
+    margin: 0 auto 10px;
+    background-image: linear-gradient(to right, #754178, #BF6986, #754178);
+    border-radius: 10px;
+  }
+
+  article p {
+    font-size: 24px;
+    font-family: Acme, sans-serif;
+    text-align: justify;
+    padding: 0 5%;
+  }
+
+  footer {
+    text-align: center;
+    color: white;
+    background-color: black;
+    opacity: 0.8;
+    padding: 10px 5%;
+  }
+
+  footer h3 {
+    font-size: 28px;
+    font-family: Luckiest Guy, cursive;
+    font-weight: 200;
+  }
+
+  footer p {
+    font-size: 20px;
+    font-family: Special Elite, cursive;
+  }
+}
+
+@media screen and (min-width: 1201px){
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to top, #6E3BC6, white);
+  }
+  
+  header h1 {
+    font-family: Indie Flower, cursive;
+    font-size: 48px;
+    margin: 20px 0 5px;
+  }
+
+  .title {
+    text-align: center;
+    padding: 0 5%;
+  }
+
+  #nav-header ul{
+    width: 100%;
+    list-style: none;
+    margin: 10px 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #nav-header ul li {
+    margin: 0 3% 0;
+    font-size: 24px;
+    font-family: Fuzzy Bubbles, cursive;
+    text-decoration: underline;
+  }
+
+  #nav-header ul li:hover {
+    color: white;
+  }
+
+  .asides {
+    display: flex;
+    justify-content: space-evenly;
+
+  }
+
+  .book-cover , .aside-one , .aside-two{
+    width: 30%;
+    margin: 10px 0;
+    padding: 5px 0;
+    background-image: linear-gradient(to right, #F7BEEF, #D669AA);
+    border-radius: 10px;
+    box-shadow: 0 0 5px black;
+  }
+
+  .book-cover {
+    background-image: url('/imgs/Alice\'s_Adventures_in_Wonderland.jpg');
+    background-size: cover;
   }
 
   aside h2 , article h1 {
