@@ -1,0 +1,3 @@
+# Exercícios - Dia 5 - CSS Responsivo - Mobile First
+
+Nestes exercícios foram colocados em prática os conhecimentos obtidos no dia, nos quais foram sobre `CSS Responsivo`, fazendo-se uso de  `media queries`, para mostrar um layout diferente em tamanhos de tela diferentes, ou seja, deixar as páginas web com a flexibilidade de se ajustar conforme as telas dos dispositivos as quais os usuários a acessam.
