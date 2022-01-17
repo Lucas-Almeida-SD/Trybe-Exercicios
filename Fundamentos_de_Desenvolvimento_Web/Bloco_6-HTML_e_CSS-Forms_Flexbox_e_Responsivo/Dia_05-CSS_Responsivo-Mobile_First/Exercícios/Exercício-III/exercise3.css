@@ -89,20 +89,33 @@ body {
   }
 }
 
-@media screen and (max-width: 300px) {
-
+@media screen and (max-width: 600px) {
   #container {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
 
+  #header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
+
+  #navigation {
+    margin: 87px 2% 0px;
+    width: auto;
+  }
+
   #navigation ul{
-    /* display: flex; */
     flex-direction: column;
   }
 
   #navigation ul li {
+    margin: 5px 0;
+  }
+
+  #navigation ul li a {
     border-right: none;
   }
 
