@@ -36,9 +36,40 @@ const damageWarrior = () => {
 const damageManaMage = () => {
   const minDamage = battleMembers.mage.intelligence;
   const maxDamage = minDamage * 2;
-  const damage = Math.floor(Math.random() * (maxDamage - minDamage + 1)) + minDamage;
-  const mana = battleMembers.mage.mana - 15;
-  return { damage, mana };
+  let damage = 'Não possui mana suficiente';
+  let spentMana = 0;
+  if (battleMembers.mage.mana >= 15) {
+    damage = Math.floor(Math.random() * (maxDamage - minDamage + 1)) + minDamage;
+    spentMana = 15;
+  }
+  return { damage, spentMana };
 }
 
-console.log(damageManaMage());
+function warriorTurnFunction(turn) {
+  battleMembers.dragon.healthPoints -= turn;
+  battleMembers.warrior.damage = turn;
+}
+
+function mageTurnFunction (turn) {
+  battleMembers.dragon.healthPoints -= turn['damage'];
+  battleMembers.mage.damage = turn['damage'];
+  battleMembers.mage.mana -= turn['spentMana'];
+}
+
+function dragonTurnFunction(turn) {
+  battleMembers.warrior.healthPoints -= turn;
+  battleMembers.mage.healthPoints -= turn;
+  battleMembers.dragon.damage = turn;
+}
+
+function showBattleFunction() {
+  console.log((battleMembers));
+}
+
+const gameActions = {
+  // Crie as HOFs neste objeto.
+  warriorTurn: warriorTurnFunction,
+  mageTurn: mageTurnFunction,
+  dragonTurn: dragonTurnFunction,
+  showBattle: showBattleFunction,
+};
