@@ -1,0 +1,3 @@
+# Exercícios - Dia 1 - JavaScript ES6 - let, const, arrow functions e template literals
+
+Nestes exercícios foram colocados em prática os conhecimentos obtidos no dia, nos quais foram sobre a mais nova versão do `JavaScript` , conhecida como `ES6` , `ECMAScript 6` ou `ES2015`. Dentre os assuntos aprendidos, encontram-se as quatro `features` do ES6 que são muito importantes para que o código fique limpo e bem escrito, além de resolverem alguns problemas da linguagem, das quais são: variáveis do tipo `let` e `const`, `arrow functions`, `template literals` e `operador ternário`.
