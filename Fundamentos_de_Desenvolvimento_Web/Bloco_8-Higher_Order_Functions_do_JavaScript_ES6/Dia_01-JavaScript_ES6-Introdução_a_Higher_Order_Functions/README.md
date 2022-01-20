@@ -1,0 +1,3 @@
+# Exercícios - Dia 1 - JavaScript ES6 - Introdução a Higher Order Functions
+
+Nestes exercícios foram colocados em prática os conhecimentos obtidos no dia, nos quais foram sobre os conceitos e as aplicações das chamadas `Higher Order Functions (HOFs)`, que são funções bastante poderosas  e podemos utilizá-las para implementar soluções para diversos tipos de situação, resultando em um código mais legível, conciso e expressivo.
