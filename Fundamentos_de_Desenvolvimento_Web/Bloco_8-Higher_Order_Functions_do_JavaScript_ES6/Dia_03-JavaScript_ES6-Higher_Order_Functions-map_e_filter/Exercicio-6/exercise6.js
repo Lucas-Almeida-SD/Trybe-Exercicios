@@ -60,18 +60,22 @@ const books = [
     releaseYear: 1928,
   },
 ];
+const currentYear = 2021;
 
-// const expectedResult = 'O Senhor dos Anéis';
-
-function authorWith3DotsOnName(array) {
+function oldBooks(array, currentYear) {
   // escreva seu código aqui
-  const filterArray = array.filter((element) => {
-    const authorName = element.author.name;
-    const dot = '.';
-    return authorName[1] === dot && authorName[4] === dot && authorName[7] === dot;
-  });
-  const newArray = filterArray.map((element) => element.name);
+  const refenceYear = currentYear - 60;
+  const newArray = array.filter((element) => element.releaseYear < refenceYear).map((element) => element.name);
   return newArray;
 }
 
-console.log(authorWith3DotsOnName(books));
+module.exports = oldBooks;
+
+
+const over60Years = books.reduce((acc, element) => {
+  if (currentYear - element.releaseYear > 60) {
+    acc.push(element.name);
+  }
+  return acc;
+}, []);
+console.log(over60Years);

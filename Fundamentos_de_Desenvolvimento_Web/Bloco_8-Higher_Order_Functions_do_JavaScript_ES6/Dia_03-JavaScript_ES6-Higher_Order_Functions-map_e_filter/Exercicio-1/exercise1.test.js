@@ -1,3 +1,5 @@
+const formatedBookNames = require('./exercise1')
+
 const books = [
   {
     id: 1,
@@ -61,35 +63,29 @@ const books = [
   },
 ];
 
-// const expectedResult = [
-//   {
-//     id: 6,
-//     name: 'O Chamado de Cthulhu',
-//     genre: 'Terror',
-//     author: { name: 'H. P. Lovecraft', birthYear: 1890 },
-//     releaseYear: 1928,
-//   },
-//   {
-//     id: 3,
-//     name: 'Fundação',
-//     genre: 'Ficção Científica',
-//     author: { name: 'Isaac Asimov', birthYear: 1920 },
-//     releaseYear: 1951,
-//   },
-//   {
-//     id: 2,
-//     name: 'O Senhor dos Anéis',
-//     genre: 'Fantasia',
-//     author: { name: 'J. R. R. Tolkien', birthYear: 1892 },
-//     releaseYear: 1954,
-//   },
-// ];
+const expectedResult = [
+  'As Crônicas de Gelo e Fogo - Fantasia - George R. R. Martin',
+  'O Senhor dos Anéis - Fantasia - J. R. R. Tolkien',
+  'Fundação - Ficção Científica - Isaac Asimov',
+  'Duna - Ficção Científica - Frank Herbert',
+  'A Coisa - Terror - Stephen King',
+  'O Chamado de Cthulhu - Terror - H. P. Lovecraft',
+];
 
-function oldBooksOrdered(array, referenceYear) {
-  // escreva seu código aqui
-  const newArray = array.filter((element) => element.releaseYear <= referenceYear);
-  newArray.sort((element1, element2) => element1.releaseYear - element2.releaseYear);
-  return newArray;
-}
+describe('Teste da função formatedBookNames', () => {
+  it('Teste 1 - Virificar se a função é definida', () => {
+    expect(formatedBookNames).toBeDefined();
+  })
 
-console.log(oldBooksOrdered(books, 2021 - 60));
+  it('Teste 2 - Verificar se retorna um array', () => {
+    expect(Array.isArray(formatedBookNames(books))).toBe(true);
+  })
+
+  it('Teste 3 - Verificar se retorna um array vazio para o array []', () => {
+    expect(formatedBookNames([])).toEqual([]);
+  })
+
+  it('Teste 4 - Verificar se retorna o array esperado "expectedResult" para o parâmetro "books"', () => {
+    expect(formatedBookNames(books)).toEqual(expectedResult);
+  })
+})

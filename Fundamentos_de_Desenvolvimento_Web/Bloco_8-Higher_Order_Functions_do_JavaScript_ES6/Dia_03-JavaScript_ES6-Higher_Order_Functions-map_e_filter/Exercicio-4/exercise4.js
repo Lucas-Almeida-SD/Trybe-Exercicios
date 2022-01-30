@@ -61,18 +61,12 @@ const books = [
   },
 ];
 
-// const expectedResult = [
-//   'Frank Herbert',
-//   'George R. R. Martin',
-//   'Isaac Asimov',
-//   'J. R. R. Tolkien',
-// ];
-
-function fantasyOrScienceFictionAuthors(array) {
+function oldBooksOrdered(array, currentYear) {
   // escreva seu código aqui
-  const filterArray = array.filter((element) => element.genre === 'Fantasia' || element.genre === 'Ficção Científica');
-  const newArray = filterArray.map((element) => element.author.name);
-  return newArray.sort();
+  const  referenceYear = currentYear - 60;
+  const newArray = array.filter((element) => element.releaseYear <= referenceYear);
+  newArray.sort((element1, element2) => element1.releaseYear - element2.releaseYear);
+  return newArray;
 }
 
-console.log(fantasyOrScienceFictionAuthors(books));
+module.exports = oldBooksOrdered;
