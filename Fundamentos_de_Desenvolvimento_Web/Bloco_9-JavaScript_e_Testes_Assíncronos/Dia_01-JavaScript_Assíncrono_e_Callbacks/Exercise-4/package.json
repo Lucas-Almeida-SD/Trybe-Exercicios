@@ -1,0 +1,15 @@
+{
+  "name": "exercise7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exercise7.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.4.7"
+  }
+}
