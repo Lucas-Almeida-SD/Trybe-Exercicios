@@ -1,3 +1,5 @@
+const authorWith3DotsOnName = require('./exercise7');
+
 const books = [
   {
     id: 1,
@@ -61,40 +63,20 @@ const books = [
   },
 ];
 
-// const expectedResult = [
-//   {
-//     age: 31,
-//     author: 'Isaac Asimov',
-//   },
-//   {
-//     age: 38,
-//     author: 'H. P. Lovecraft',
-//   },
-//   {
-//     age: 39,
-//     author: 'Stephen King',
-//   },
-//   {
-//     age: 43,
-//     author: 'George R. R. Martin',
-//   },
-//   {
-//     age: 45,
-//     author: 'Frank Herbert',
-//   },
-//   {
-//     age: 62,
-//     author: 'J. R. R. Tolkien',
-//   },
-// ];
+const expectedResult = 'O Senhor dos Anéis';
 
-function nameAndAge(array) {
-  // escreva seu código aqui
-  const newArray = array.map((element) => { 
-    return { age: element.releaseYear - element.author.birthYear, author: element.author.name };
+describe('Teste da função authorWith3DotsOnName', () => {
+  it('Teste 1 - Verificar se a função é definida', () => {
+    expect(authorWith3DotsOnName).toBeDefined();
   });
-  newArray.sort((element1, element2) => element1.age - element2.age);
-  return newArray;
-}
 
-console.log(nameAndAge(books));
+  it('Teste 2 - Verificar se retorna uma "string" para o parâmetro "books"', () => {
+    expect(typeof authorWith3DotsOnName(books)).toBe('string');
+  });
+
+  it('Teste 3 - Verificar se retorna o array esperado "expectedResult" para o parâmentro "books"', () => {
+    expect(authorWith3DotsOnName(books)).toBe(expectedResult);
+  });
+
+  // it('Teste 4 - Verificar se o')
+})

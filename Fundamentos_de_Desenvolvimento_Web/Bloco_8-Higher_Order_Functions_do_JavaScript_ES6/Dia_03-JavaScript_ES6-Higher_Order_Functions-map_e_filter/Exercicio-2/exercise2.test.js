@@ -1,3 +1,5 @@
+const nameAndAge = require('./exercise2');
+
 const books = [
   {
     id: 1,
@@ -61,16 +63,47 @@ const books = [
   },
 ];
 
-// const expectedResult = [
-//   'O Senhor dos Anéis',
-//   'Fundação',
-//   'O Chamado de Cthulhu',
-// ];
+const expectedResult = [
+  {
+    age: 31,
+    author: 'Isaac Asimov',
+  },
+  {
+    age: 38,
+    author: 'H. P. Lovecraft',
+  },
+  {
+    age: 39,
+    author: 'Stephen King',
+  },
+  {
+    age: 43,
+    author: 'George R. R. Martin',
+  },
+  {
+    age: 45,
+    author: 'Frank Herbert',
+  },
+  {
+    age: 62,
+    author: 'J. R. R. Tolkien',
+  },
+];
 
-function oldBooks(array, refenceYear) {
-  // escreva seu código aqui
-  const newArray = array.filter((element) => element.releaseYear < refenceYear - 60).map((element) => element.name);
-  return newArray;
-}
+describe('Teste da função nameAndAge', () => {
+  it('Teste 1 - Verificar se a função é definida', () => {
+    expect(nameAndAge).toBeDefined();
+  })
 
-console.log(oldBooks(books, 2021));
+  it('Teste 2 -  Verificar se retorna um array', () => {
+    expect(Array.isArray(nameAndAge(books))).toBe(true);
+  })
+
+  it('Teste 3 - Verificar se os elementos do array retornado são do tipo objeto', () => {
+    expect(nameAndAge(books).every((element) => typeof element === 'object')).toBe(true);
+  })
+
+  it('Teste 4 - Verificar se retorna o array esperado "expectedResult" para a variável "books"', () => {
+    expect(nameAndAge(books)).toEqual(expectedResult);
+  }) 
+})
