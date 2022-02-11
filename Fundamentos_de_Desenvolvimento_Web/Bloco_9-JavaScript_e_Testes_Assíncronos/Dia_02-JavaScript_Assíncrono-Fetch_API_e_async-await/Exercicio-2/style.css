@@ -14,14 +14,14 @@ h1 {
 
 .table {
   margin: 30px auto;
-  width: 50%;
+  width: 80%;
   box-shadow: 0 0 5px black;
   background-color: white;
   opacity: 0.8;
 }
 
 table tr td , table tr th {
-  width: 33%;
+  width: 25%;
   text-align: center;
   padding: 2px 0;
 }
