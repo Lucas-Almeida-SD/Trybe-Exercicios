@@ -1,0 +1,155 @@
+:root {
+  --verde-escuro: rgb(3, 107, 82);
+  --verde-claro: rgb(47, 193, 140);
+  --roxo-escuro: rgb(65, 25, 127);
+  --roxo-claro: rgb(137, 88, 163);
+  --azul-claro: rgb(0, 213, 226);
+  --azul-escuro: rgb(0, 109, 251);
+  --cinza-claro: rgb(225, 229, 235);
+  --cinza1: rgb(62, 66, 75);
+  --cinza2: rgb(40, 42, 47);
+  --cinza3: rgb(30, 31, 36);
+  --cinza4: rgb(26, 27, 28);
+  } 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--cinza4);
+}
+
+#root {
+  width: 95%;
+  margin: 0 auto;
+  color: white;
+}
+
+main h1 {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.poke-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.poke-card {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  margin: 20px;
+  background-color: var(--cinza2);
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--cinza-claro);
+  padding: 8px;
+}
+
+.poke-card:hover {
+  cursor: pointer;
+  animation: tremer .1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes tremer {
+  0% {margin-top: 0;}
+  25% {margin-top: 2px;}
+  50% {margin-top: 0;}
+  75% {margin-top: -2px;}
+  100% {margin-top: 0;}
+}
+
+.poke-card div {
+  width: 60%;
+}
+.poke-card p {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.poke-card img {
+  width: 40%;
+}
+
+.type {
+  margin: 0 24px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.normal {
+  background-color: #a4acaf;
+}
+
+.fire {
+ background-color: #fd7d24;
+}
+
+.water {
+  background-color: #4592c4;
+}
+
+.grass {
+  background-color: #9bcc50;
+}
+
+.flying {
+  background: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+}
+
+.fighting {
+  background-color: #d56723;
+}
+
+.poison {
+  background-color: #b97fc9;
+}
+
+.electric {
+  background-color: #eed535;
+}
+
+.ground {
+  background: linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+}
+
+.rock {
+  background-color: #a38c21;
+}
+
+.psychic {
+  background-color: #f366b9;
+}
+
+.ice {
+  background-color: #51c4e7;
+}
+
+.bug {
+  background-color: #729f3f;
+}
+
+.ghost {
+  background-color: #7b62a3;
+}
+
+.steel {
+  background-color: #9eb7b8;
+}
+
+.dragon {
+  background: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+}
+
+.dark {
+  background-color: #707070;
+}
+
+.fairy {
+  background-color: #fdb9e9;
+}
