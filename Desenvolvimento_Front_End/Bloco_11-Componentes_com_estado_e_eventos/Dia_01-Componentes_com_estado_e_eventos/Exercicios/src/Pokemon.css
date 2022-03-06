@@ -1,0 +1,25 @@
+:root {
+  --cinza-claro: rgb(225, 229, 235);
+  --cinza1: rgb(62, 66, 75);
+  --cinza2: rgb(40, 42, 47);
+  --cinza3: rgb(30, 31, 36);
+  --cinza4: rgb(26, 27, 28);
+}
+
+.pokemon {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cinza3);
+  box-shadow: 0 0 4px white;
+  padding: 0 16px;
+}
+
+.pokemon div {
+  text-align: center;
+  color: white;
+  margin-right: 16px;
+}

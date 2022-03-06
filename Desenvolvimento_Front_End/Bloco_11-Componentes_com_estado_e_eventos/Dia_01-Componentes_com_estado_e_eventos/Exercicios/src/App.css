@@ -1,0 +1,15 @@
+:root {
+  --cinza4: rgb(26, 27, 28);
+}
+
+html {
+  background-color: var(--cinza4);
+}
+
+.App h1 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 48px;
+  font-weight: 100;
+  text-align: center;
+  color: white;
+}
