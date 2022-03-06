@@ -1,0 +1,11 @@
+.page-not-found p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 16px 0;
+}
+
+.page-not-found img {
+  border-radius: 10px;
+  box-shadow: 0 0 8px white;
+}
