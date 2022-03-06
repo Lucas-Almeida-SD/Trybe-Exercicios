@@ -7,32 +7,34 @@ class App extends React.Component {
     this.state = {
       img: undefined,
       loading: true,
-      shouldUpdate: false,
+      name: '',
+      doguinhos: [],
     };
     this.updateImg = this.updateImg.bind(this);
+    this.getSavedDogATLocalStorage = this.getSavedDogATLocalStorage.bind(this);
   }
 
   componentDidMount() {
-    this.updateImg();
+    const doguinhos = JSON.parse(localStorage.getItem('doguinhos'));
+    if (doguinhos) {
+      this.getSavedDogATLocalStorage(doguinhos);
+    } else {
+      this.updateImg();
+    }
   }
 
-  shouldComponentUpdate() {
-    const { shouldUpdate } = this.state;
-    return shouldUpdate;
-  }
-
-  componentDidUpdate() {
-    this.showTheRace();
+  getSavedDogATLocalStorage(doguinhos) {
+    const lastDogImg = doguinhos[doguinhos.length - 1].img;
+    this.setState({ doguinhos, img: lastDogImg, loading: false });
   }
 
   showTheRace() {
     const { img } = this.state;
-    const { message } = img;
-    const getRace = message.split('/')[4].split('-');
+    const getRace = img.split('/')[4].split('-');
     const race = getRace.map((element) => (
       `${element[0].toUpperCase()}${element.slice(1)}`
     )).join(' ');
-    alert(race);
+    alert(`Race: ${race}`);
   }
 
   updateImg() {
@@ -42,16 +44,33 @@ class App extends React.Component {
         const response = await fetch(url);
         const data = await response.json();
         const { message } = data;
-        localStorage.setItem('img', JSON.stringify(message));
         if (!message.includes('terrier')) {
-          this.setState({ img: data, shouldUpdate: true });
+          this.setState({ img: message, loading: false }, () =>
+            this.showTheRace());
         } else {
-          this.setState({ shouldUpdate: false });
+          this.setState({ loading: false });
         }
-        this.setState({ loading: false });
       });
     } catch (error) {
       console.log(error);
+    }
+  }
+
+  dogName({ target }) {
+    const { value } = target;
+    this.setState({ name: value });
+  }
+
+  saveDog() {
+    const { img, name , doguinhos} = this.state;
+    if (name !== '') {
+      this.setState({ doguinhos: [...doguinhos, {img, name}], name: '' }, () => {
+      const { doguinhos } = this.state;
+      localStorage.setItem('doguinhos', JSON.stringify(doguinhos));
+      alert('Salvo com sucesso!')
+    });
+    } else {
+      alert('Dê um nome ao doguinho!')
     }
   }
 
@@ -61,16 +80,34 @@ class App extends React.Component {
       return <p>loading...</p>;
     }
     if (img) {
-      return <img src={ img.message } alt="doguin" />;
+      return <img src={ img } alt="doguin" />;
     }
   }
 
   render() {
+    const { name, doguinhos } = this.state;
     return (
-      <section>
-        <p>oii</p>
-        {this.renderImg()}
+      <section className='dog-section'>
+        <div>
+          <label>Nome do doguin: </label>
+          <input type="text" value={ name } onChange={(event) => this.dogName(event)}/>
+        </div>
+        <button type="button" onClick={() => this.saveDog()}>Salvar</button>
+        <div className='dog-img-div'>
+          {this.renderImg()}
+        </div>
         <button type="button" onClick={ this.updateImg }>Atualizar Imagem</button>
+        <section className='saved-dog-section'>
+          <h2>My Dogs</h2>
+          {doguinhos.map((element) => {
+            return (
+              <figure key={element.name}>
+                <img src={element.img} alt={element.name} />
+                <figcaption>{element.name}</figcaption>
+              </figure>
+            );
+          })}
+        </section>
       </section>
     );
   }
