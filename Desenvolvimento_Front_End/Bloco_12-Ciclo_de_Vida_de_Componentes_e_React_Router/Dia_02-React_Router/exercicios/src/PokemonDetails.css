@@ -1,0 +1,79 @@
+.pokemon-details-section .pokemon-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemon-details-section .pokemon-details h2 ,
+.pokemon-details-section .summary-section h2 ,
+.pokemon-details-section .locations-section h2
+{
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 24px;
+  font-weight: 100;
+  margin-bottom: 0;
+  margin-top: 32px;
+}
+
+.pokemon-details-section .pokemon-details .favorite-pokemon-div {
+  display: flex;
+  align-items: center;
+}
+
+.pokemon-details-section .pokemon-details .favorite-pokemon-div input {
+  width: 20px;
+  height: 20px;
+}
+
+.pokemon-details-section .pokemon-details .favorite-pokemon-div label {
+  font-family: 'Fuzzy Bubbles', cursive;
+  font-size: 18px;
+}
+
+.pokemon-details-section .summary-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemon-details-section .summary-section p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  width: 60%;
+}
+
+.pokemon-details-section .locations-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pokemon-details-section .locations-section h2 {
+  width: 100%;
+}
+
+.pokemon-details-section .locations-section figure {
+  background-color: rgb(255, 255, 255, 0.8);
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0 0 8px white;
+  padding: 8px;
+  width: 30%;
+}
+
+.pokemon-details-section .locations-section figure:hover {
+  transform: translateY(-8px);
+}
+
+.pokemon-details-section .locations-section figure img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.pokemon-details-section .locations-section figure figcaption {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 8px 0;
+}

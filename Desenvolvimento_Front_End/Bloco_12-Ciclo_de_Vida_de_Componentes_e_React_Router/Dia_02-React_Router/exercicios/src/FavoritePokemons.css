@@ -1,0 +1,27 @@
+.favorite-pokemon-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.favorite-pokemon-section h2 {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 24px;
+  font-weight: 100;
+  margin-top: 32px;
+  margin-bottom: 18px;
+  width: 100%;
+}
+
+.favorite-pokemon-section .no-favorite-pokemons p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.favorite-pokemon-section .no-favorite-pokemons img {
+  border-radius: 10px;
+  box-shadow: 0 0 4px white;
+}
