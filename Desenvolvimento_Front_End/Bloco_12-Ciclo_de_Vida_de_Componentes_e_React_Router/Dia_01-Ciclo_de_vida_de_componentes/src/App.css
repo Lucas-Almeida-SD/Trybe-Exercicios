@@ -1,0 +1,44 @@
+.App {
+  text-align: center;
+}
+
+.dog-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dog-img-div {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+}
+
+
+.dog-img-div img {
+  width: 80%;
+}
+
+.saved-dog-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.saved-dog-section figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+
+.saved-dog-section h2 {
+  text-align: center;
+  width: 100%;
+}
+
+.saved-dog-section figure img {
+  width: 90%;
+}
