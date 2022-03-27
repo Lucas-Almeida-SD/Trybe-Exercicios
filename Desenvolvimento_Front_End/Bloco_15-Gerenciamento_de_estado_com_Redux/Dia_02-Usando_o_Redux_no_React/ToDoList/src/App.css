@@ -1,0 +1,44 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.App .input-todo {
+margin: 20px 0;
+}
+
+.input-todo label input{
+  margin: 0 8px;
+}
+
+.todolist-section div button {
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 4px 16px;
+  margin: 0 8px;
+}
+
+.todolist-section div .selected-button {
+  color: white;
+  background-color: blue;
+}
+
+.todolist-section ul li {
+  margin: 16px 0;
+}
+
+.todolist-section ul li p {
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 8px;
+  margin: 4px 0;
+}
+
+.todolist-section ul li .selected-task {
+  background-color: gray;
+}
+
+.todolist-section ul li .not-selected-task {
+  border: 1px gray solid;
+}
