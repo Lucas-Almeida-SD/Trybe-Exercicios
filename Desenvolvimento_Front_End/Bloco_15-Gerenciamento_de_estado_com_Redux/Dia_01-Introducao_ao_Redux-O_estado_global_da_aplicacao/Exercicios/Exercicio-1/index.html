@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+    <style>
+      body {
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      #container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      button {
+        height: 50px;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <p>Color: <span id="value">white</span></p>
+      <button id="previous">Previous color</button>
+      <button id="next">Next color</button>
+      <button id="random">Random Color</button>
+    </div>
+
+    <script>
+      const ESTADO_INICIAL = {
+        colors: ['white', 'black', 'red', 'green', 'blue', 'yellow'],
+        index: 0,
+      };
+
+      const reducer = (state = ESTADO_INICIAL, action) => {
+        switch (action.type) {
+          case ('change-color') :
+            return {
+              ...state,
+              colors: action.colors,
+              index: action.index,
+            };
+          default :
+          return state;
+        }
+      }
+
+      const store = Redux.createStore(reducer);
+
+      const NEXT_COLOR = () => {
+        const { colors, index } = store.getState();
+        const newIndex = (index < colors.length - 1) ? index + 1 : index;
+        return { type: 'change-color', colors, index: newIndex };
+      }
+
+      const PREVIOUS_COLOR = () => {
+        const { colors, index } = store.getState();
+        const newIndex = (index > 0) ? index - 1 : index;
+        return { type: 'change-color', colors, index: newIndex };
+      }
+
+      const RANDOM_COLOR = () => {
+        let { colors } = store.getState();
+        const values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
+        let newColor = '#';
+        for (let index = 0; index < 6; index += 1) {
+          newColor += `${values[Math.floor(Math.random() * values.length)]}`
+        }
+        colors = [...colors, newColor];
+        return { type: 'change-color' , colors, index: (colors.length - 1) }
+      }
+
+      function changeColor(action) {
+        store.dispatch(action());
+      }
+
+      const nextBtn = document.getElementById('next');
+      nextBtn.addEventListener('click', () => changeColor(NEXT_COLOR))
+
+      const previousBtn = document.getElementById('previous');
+      previousBtn.addEventListener('click', () => changeColor(PREVIOUS_COLOR))
+
+      const randomBtn = document.getElementById('random');
+      randomBtn.addEventListener('click', () => changeColor(RANDOM_COLOR))
+
+      store.subscribe(() => {
+        const { colors, index } = store.getState();
+        const container = document.getElementById('container');
+        const value = document.getElementById('value');
+        container.style.backgroundColor = colors[index];
+        value.innerHTML = colors[index];
+      });
+    </script>
+  </body>
+</html>
