@@ -1,0 +1,14 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App ul {
+  padding: 0;
+  margin: 0;
+}
+
+.App ul li {
+  margin: 8px 0;
+}

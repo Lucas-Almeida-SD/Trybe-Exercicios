@@ -1,0 +1,19 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App img {
+  width: 200px;
+}
+
+
+.App ul {
+  padding: 0;
+  margin: 0;
+}
+
+.App li {
+  cursor: pointer;
+}
