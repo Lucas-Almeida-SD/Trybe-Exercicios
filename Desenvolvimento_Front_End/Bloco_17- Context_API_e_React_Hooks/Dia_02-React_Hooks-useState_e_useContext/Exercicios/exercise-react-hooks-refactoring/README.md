@@ -10,7 +10,7 @@ Nesse exercício toda a estrutura de Context API já está pronta. Utilize React
 
 ---
 
-#### Exercício 2
+## Exercício 2
 
 Refaça o exercício 1.2 do dia 2 do bloco 15. Assim como no exercício anterior, refatore a aplicação para utilizar **React Hooks** para gerenciar estado no lugar do Redux.
 
@@ -18,6 +18,6 @@ Nesse exercício toda a estrutura de Context API já está pronta, você precisa
 
 ---
 
-#### Exercício 3
+## Exercício 3
 
 Refatore o exercício referente à aplicação Tic Tac Toe, também substituindo toda a lógica de classes para a lógica de _React Hooks_, deixando todos os componentes funcionais. Aproveite que ele possui testes e veja como é prático refatorar uma aplicação que já foi testada!
