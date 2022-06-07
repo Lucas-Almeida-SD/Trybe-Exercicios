@@ -29,4 +29,6 @@ function imcFunc() {
   }
 }
 
+imcFunc();
+
 module.exports = imcFunc;

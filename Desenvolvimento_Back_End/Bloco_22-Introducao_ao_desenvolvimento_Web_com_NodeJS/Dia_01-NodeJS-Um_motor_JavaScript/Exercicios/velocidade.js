@@ -7,4 +7,6 @@ function velocidadeFunc() {
   console.log(`A velocidade média é de ${(distancia / tempo).toFixed(2)} m/s.`);
 }
 
+velocidadeFunc();
+
 module.exports = velocidadeFunc;

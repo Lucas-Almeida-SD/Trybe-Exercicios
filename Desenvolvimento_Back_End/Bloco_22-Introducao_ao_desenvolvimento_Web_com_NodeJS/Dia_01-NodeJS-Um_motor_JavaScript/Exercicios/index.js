@@ -1,28 +1,32 @@
 const readline = require('readline-sync');
 
-const imc = require('./imc');
-const velocidade = require('./velocidade');
-const sorteio = require('./sorteio');
-
 const option = readline.questionInt(
   'Selecione uma opcão\n' +
-  '1: calcular IMC\n' +
-  '2: calcular velocidade\n' +
-  '3: sorteio\n' +
-  '0: sair\n'
+  '1: Calcular IMC\n' +
+  '2: Calcular velocidade\n' +
+  '3: Sorteio\n' +
+  '4: Calcular fatorial\n' +
+  '5: Sequência de Fibonacci\n' +
+  '0: Sair\n'
 );
 
 switch (option) {
   case 0:
     break;
   case 1:
-    imc();
+    require('./imc');
     break;
   case 2:
-    velocidade();
+    require('./velocidade');
     break;
   case 3:
-    sorteio();
+    require('./sorteio');
+    break;
+  case 4:
+    require('./fatorial');
+    break;
+  case 5:
+    require('./fibonacci');
     break;
   default:
     console.log('Opção inválida!');

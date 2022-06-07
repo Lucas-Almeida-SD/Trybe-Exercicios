@@ -22,4 +22,6 @@ function sorteioFunc() {
   }
 }
 
+sorteioFunc();
+
 module.exports = sorteioFunc;
