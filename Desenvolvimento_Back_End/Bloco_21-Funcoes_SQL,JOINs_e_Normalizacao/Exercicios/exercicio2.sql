@@ -1,1 +1,0 @@
-SELECT (MAX(salary) - MIN(salary)) AS 'Diferença entre salários' FROM hr.employees;
