@@ -1,1 +1,0 @@
-SELECT MAX(salary) AS 'Maior Salário' FROM hr.employees;
