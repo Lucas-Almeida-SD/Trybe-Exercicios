@@ -1,0 +1,10 @@
+use('books');
+
+db.books.find({
+  status: 'MEAP',
+}, {
+  _id: false,
+  title: true,
+  authors: true,
+  status: true,
+}).limit(10).skip(5);
