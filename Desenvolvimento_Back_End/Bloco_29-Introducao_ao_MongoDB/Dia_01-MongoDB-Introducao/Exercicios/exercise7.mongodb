@@ -1,0 +1,3 @@
+use('books');
+
+db.books.countDocuments();

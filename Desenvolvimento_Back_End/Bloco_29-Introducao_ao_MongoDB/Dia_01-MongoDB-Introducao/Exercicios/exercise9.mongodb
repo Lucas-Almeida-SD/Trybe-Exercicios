@@ -1,0 +1,8 @@
+use('books');
+
+db.books.find({}, {
+  _id: false,
+  title: true,
+  isbn: true,
+  pageCount: true,
+}).limit(3);
