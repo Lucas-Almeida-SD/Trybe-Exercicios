@@ -1,0 +1,13 @@
+use('cinema');
+
+db.movies.find({
+  category: "adventure",
+  ratings: {
+    $gt: 103
+  }
+}, {
+  _id: false,
+  title: true,
+  ratings: true,
+  category: true,
+});
